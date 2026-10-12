@@ -34,7 +34,7 @@ if [ "$OS" == "Ubuntu" ] && [ "$VERSION" == "22.04" -o "$VERSION" == "24.04" ]; 
   sudo apt-get install -y build-essential jq wget unzip
 
   if [ -d "$INSTALL_PATH" ]; then
-    BINARY_URL="https://github.com/NodeNavigator/blockmaze-v2-testnet-upgrade/releases/download/blockmazed/${BINARY}"
+    BINARY_URL="https://github.com/NodeNavigator/genesis-ceremony/releases/download/blockmazed/${BINARY}"
     echo "Downloading binary for Ubuntu $VERSION: $BINARY_URL"
     curl -L "$BINARY_URL" -o "/tmp/${BINARY}"
     chmod +x "/tmp/${BINARY}"
