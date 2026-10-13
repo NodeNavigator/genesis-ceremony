@@ -16,7 +16,7 @@ set -e
 # ---------------------------------------------------------------------------
 # EDIT THESE
 # ---------------------------------------------------------------------------
-REPO_DIR="${REPO_DIR:-$HOME/block-maze-chain-testnet}"   # this git repo, checked out on the Mac
+REPO_DIR="${REPO_DIR:-$HOME/Downloads/block-maze-chain}"   # this git repo, checked out on the Mac
 # Where you scp'd the artifacts from the AWS node's /data/genesis-artifacts.
 # (Macs have no /data, so these stay under $HOME here.)
 ARTIFACTS="${ARTIFACTS:-$HOME/genesis-artifacts}"

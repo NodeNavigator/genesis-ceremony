@@ -141,23 +141,6 @@ $BINARY init "$MONIKER" -o --chain-id "$CHAINID" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1h9uulfhep8kqzpc2umeqjx07sugc8u29223jna 6250000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1v0xes3ryh788mcczxmd0995wpnex0durshda36 1500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 
-# Founder - Core Allocation
-# $BINARY add-genesis-account bmz17l2mjk3ehehze20yfwj6kumym8v8vjj6qxh5xg 340860000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz1zrjtz0fqnnw4lf3cynqjumyr90ka0slwvgfqc0 176890000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz13n6kjcfu3l78syrtwu8fysqz647sg7n8jv0y65 95000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz1p25ecqd4egvr5akxq6rezxar5msklnpff0adz6 66500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz1m6gc8m5l42yat9e2gwdu58ajkfn8ay5phz9rx4 28500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz1sjqql5z62kc4rknxr52sc8xvu83393yg6mw49v 118750000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz1tpm0pl3y4raf405r5d486gpfvdhezp92hxu4ft 9500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz1cfct6kmtjgnum73eurfu4r3qnwgmzv83mw2vqt 19000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz13w25s2paay8s7xc3rtp3kgkr9f7gv4d9922zrd 190000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz1h36fk4slu5hvy9nqefmwrrqxqusnlqf9raex5y 190000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz18lg5n05wx5lrmnaclhetjh26jn8y6m4dexlje5 380000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz17ltj8z48u5wlxj67p0lzpjgzunf3eyzwvenk8q 95000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz1dsu7lfn86vhwsdndtya6skyj3t5l0hlddnjxk2 95000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz10fqycxkvpyur3qlvn4dxlnp65asqvfxquueck4 47500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-# $BINARY add-genesis-account bmz1ltgy8r0qf0aakhp08g09t97vhpkv7z9722mfm0 47500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
-
 # Validator Addresses (Vendor & Contributor Performance Pool)
 # Each holds 500,000 to bond + ~2 BMZ for gas. THESE are the addresses your
 # Ledger (and each other validator's key) must derive to.
@@ -176,31 +159,31 @@ $BINARY init "$MONIKER" -o --chain-id "$CHAINID" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1jrvtd5s39gwz8qd62nvjm0mpkpejvvghw54vw4 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 
 # Genesis Validator Compensation Pool
- $BINARY add-genesis-account bmz1lya5ec74uk0dt2eqvjc847f05qay0ltwwvqcpk 100000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1hneqzs7hc5gwqvy8parnwuy5uurrfwv9xuyg0q 100000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Early / Strategic Investors
- $BINARY add-genesis-account bmz1escuhycqte9c7w8lyn4qtn9yf68js6f8nz32wf 500000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1wtd4hx6m7u6xtdwwuy9jtmplxv5yf7tn8qu08e 500000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Vendor & Contributor Performance Pool
- $BINARY add-genesis-account bmz16rvp8lkas9j0rv0xweaehx9pvsngv9fcgsp0na 593500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1l3tezd9xkehyghqp5q76mklmg8dkr5zvyefuh0 593500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # RWA, Business Development & Protocol Operations Team
- $BINARY add-genesis-account bmz1ncr4fa338rrr73df6sll94kzfxendagw8693xa 600000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1629g6ae26cxv956ajvnw7w9k8sj3zphh676jnj 600000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Advisors & Specialized Experts
- $BINARY add-genesis-account bmz1f6eqenzd3842e6j3v94m9tm3d2t763wnv2j20l 200000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1lk4vktlzqe7gtws0km8m0uqzvejj4q9m6yk2yp 200000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Community Users & Contributors
- $BINARY add-genesis-account bmz1syc5z72fmvx28l9v88cjs6ez74nxyn4ljt8u76 1200000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz182thfv662tnr4gpmum7hs330e0egycg9m5cltc 1200000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Ecosystem & RWA Adoption Fund
- $BINARY add-genesis-account bmz1ggu4jyjf2p9rcwpc6empmgsjkz7g2wvnes08pu 1000000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz13hhqm7xazcxxm0stacxk7u5ngqkxt8d2r92ags 1000000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Protocol-Owned Liquidity
- $BINARY add-genesis-account bmz1qtqeuwcls348zcw0lzwz47zfu7dfdne8t49t40 350000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1fg9z3uyhe5u22xl8dp4zr6ps3afgtndn0mv47e 350000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Tactical Exchange & MM Incentives
- $BINARY add-genesis-account bmz1tt030v62z3q4a55l8lpxxh0k0xqakjw9z2z8hq 350000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1pa6x9m9h0yaw4k2d20rfpy3dl4u26mvgpc6w0e 350000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Circuit Breaker Reserve
- $BINARY add-genesis-account bmz1kl9dfc0572z638pw6kqh32px3yuj5hxawwgdyn 400000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1uy4285tyaxwpc07hg3z9flhn4z3dsxvyl68xjz 400000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Foundation Operations
- $BINARY add-genesis-account bmz10ee39z3t43nh3hc8uk9xvh7pl6x7h5hwm7gjlf 200000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz14phuj3s3275sgqa4hrxx0xfqvhyfk32xy59e6q 200000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Ecosystem & Public Grants
- $BINARY add-genesis-account bmz133a3r8zj8gqh753m36x3z8767k5sgclwh2umtc 200000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1eejtdp88sxc346mazneeq82rcg392ff7e4nkne 200000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Strategic Long-Term Reserves
- $BINARY add-genesis-account bmz1aam8fp77q4ej7dsq0mr7a9832kkfl6zge7j5vd 300000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz18uph3m3xq5r2a4dxtwqqtwldw4ueheczhdxkms 300000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 
 # ---------------------------------------------------------------------------
 # Genesis parameter patches  (NOTE: these MUST run before the gentxs are made,
@@ -308,8 +291,6 @@ echo ""
 echo "Next:"
 echo "  1. scp the skeleton + coordinator-node.txt down to your Mac."
 echo "  2. Run phase2-gentx-mac.sh on the Mac with the Ledger attached."
-echo "  3. Send the skeleton to the other 12 validators so they can do the same."
-echo "  4. Collect all gentx JSON files, then run phase3-collect.sh here."
 echo ""
 echo "Do NOT start the service yet -- genesis has no validators in it."
 echo "============================================================================"
