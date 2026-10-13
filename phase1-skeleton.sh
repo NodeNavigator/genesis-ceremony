@@ -149,25 +149,25 @@ $BINARY init "$MONIKER" -o --chain-id "$CHAINID" --home "$HOMEDIR"
 # Each holds 500,000 to bond + ~2 BMZ for gas. THESE are the addresses your
 # Ledger (and each other validator's key) must derive to.
  $BINARY add-genesis-account bmz1tw5tpafapktpqdlvjllsculh4ptc0fjlkkynhn 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1cqt0d88re2jh5rce3a8srppkwc0xrxk98ez7tc 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1fgsj0lw4au08030danzjf050vf67xarr7nvhg6 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1y0q2ux95qqfuj2c4pcpxzsdzllhzefdl4x0h2p 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1cwq0c0qptlzex85l3utsswdpva82jvhwp2w99x 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1lhsun9ad8mf0fuatj9y58amjtczlq9klwpsuhk 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz18r2xrnvkg8p0euy4x9qa2stg6p3czz6yjqcvpa 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1u7m4ctw5f6umml8prqtmdprw8m07ldfvwfpjwm 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1n3p5ddd6cw4wtpj6kjh5m30uh29py5l2dm8rwf 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1smp6cw0tmzrf68sa090jzhqjgclgzg2pkfkem5 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz17ulxgqlmxhvepx5hfv485lfletq3nngeljxhw3 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz17lvaq6rp8rwhwj397trsdzgxyw0ery3qztnunt 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1jrvtd5s39gwz8qd62nvjm0mpkpejvvghw54vw4 499900000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1cqt0d88re2jh5rce3a8srppkwc0xrxk98ez7tc 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1fgsj0lw4au08030danzjf050vf67xarr7nvhg6 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1y0q2ux95qqfuj2c4pcpxzsdzllhzefdl4x0h2p 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1cwq0c0qptlzex85l3utsswdpva82jvhwp2w99x 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1lhsun9ad8mf0fuatj9y58amjtczlq9klwpsuhk 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz18r2xrnvkg8p0euy4x9qa2stg6p3czz6yjqcvpa 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1u7m4ctw5f6umml8prqtmdprw8m07ldfvwfpjwm 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1n3p5ddd6cw4wtpj6kjh5m30uh29py5l2dm8rwf 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1smp6cw0tmzrf68sa090jzhqjgclgzg2pkfkem5 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz17ulxgqlmxhvepx5hfv485lfletq3nngeljxhw3 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz17lvaq6rp8rwhwj397trsdzgxyw0ery3qztnunt 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1jrvtd5s39gwz8qd62nvjm0mpkpejvvghw54vw4 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 
 # Genesis Validator Compensation Pool
  $BINARY add-genesis-account bmz1hneqzs7hc5gwqvy8parnwuy5uurrfwv9xuyg0q 100000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Early / Strategic Investors
  $BINARY add-genesis-account bmz1wtd4hx6m7u6xtdwwuy9jtmplxv5yf7tn8qu08e 500000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Vendor & Contributor Performance Pool
- $BINARY add-genesis-account bmz1l3tezd9xkehyghqp5q76mklmg8dkr5zvyefuh0 593500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1l3tezd9xkehyghqp5q76mklmg8dkr5zvyefuh0 593498700000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # RWA, Business Development & Protocol Operations Team
  $BINARY add-genesis-account bmz1629g6ae26cxv956ajvnw7w9k8sj3zphh676jnj 600000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 # Advisors & Specialized Experts
