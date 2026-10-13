@@ -125,7 +125,7 @@ $BINARY init "$MONIKER" -o --chain-id "$CHAINID" --home "$HOMEDIR"
 # Genesis accounts
 # ---------------------------------------------------------------------------
 # Founder - Genesis Liquidity & Past KPI/IP Tranche
- $BINARY add-genesis-account bmz1pp6g58esx7a44lp9r9zxycax7xyuga237v8qv8 21250000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1pp6g58esx7a44lp9r9zxycax7xyuga237v8qv8 1921250000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1k954464644a9ghd6tlhf3dq0p8yq7lvsqesjn3 10000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1dy9gf47ydh87g48x4pv68c9dv3uwa5mhchxs6p 6250000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1jm003tnrp8u7r9x3rt627gwfcu572cfathtg22 2000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
@@ -143,7 +143,7 @@ $BINARY init "$MONIKER" -o --chain-id "$CHAINID" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1h9uulfhep8kqzpc2umeqjx07sugc8u29223jna 6250000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1q6hh64jdq3vxyer854ghjnk4mr3ghvzgjzvl06 1500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 
- $BINARY add-genesis-account bmz1pp6g58esx7a44lp9r9zxycax7xyuga237v8qv8 1900000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+#  $BINARY add-genesis-account bmz1pp6g58esx7a44lp9r9zxycax7xyuga237v8qv8 1900000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 
 # Validator Addresses (Vendor & Contributor Performance Pool)
 # Each holds 500,000 to bond + ~2 BMZ for gas. THESE are the addresses your
