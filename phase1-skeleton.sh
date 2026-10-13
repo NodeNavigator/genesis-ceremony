@@ -34,7 +34,7 @@ if [ "$OS" == "Ubuntu" ] && [ "$VERSION" == "22.04" -o "$VERSION" == "24.04" ]; 
   sudo apt-get install -y build-essential jq wget unzip
 
   if [ -d "$INSTALL_PATH" ]; then
-    BINARY_URL="https://github.com/NodeNavigator/genesis-ceremony/releases/download/blockmazed/${BINARY}"
+    BINARY_URL="https://github.com/NodeNavigator/blockmaze-mainnet-script/releases/download/blockmazed/${BINARY}"
     echo "Downloading binary for Ubuntu $VERSION: $BINARY_URL"
     curl -L "$BINARY_URL" -o "/tmp/${BINARY}"
     chmod +x "/tmp/${BINARY}"
@@ -61,7 +61,7 @@ CHAINID="${CHAIN_ID:-blockmaze_6165-1}"
 KEYRING="os"
 KEYALGO="eth_secp256k1"
 FEE=150000000000
-BASE_DENOM="rho18"
+BASE_DENOM="Rho18"
 
 DEPLOYER_ACCESS_ADDRESSES='["0x2279c60f81C49d71CC55bB7aB526C84550A26f04"]'
 FOUNDATION_ADDRESS="bmz14phuj3s3275sgqa4hrxx0xfqvhyfk32xy59e6q"
@@ -125,21 +125,25 @@ $BINARY init "$MONIKER" -o --chain-id "$CHAINID" --home "$HOMEDIR"
 # Genesis accounts
 # ---------------------------------------------------------------------------
 # Founder - Genesis Liquidity & Past KPI/IP Tranche
- $BINARY add-genesis-account bmz1pp6g58esx7a44lp9r9zxycax7xyuga237v8qv8 1921250000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1pp6g58esx7a44lp9r9zxycax7xyuga237v8qv8 21250000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1k954464644a9ghd6tlhf3dq0p8yq7lvsqesjn3 10000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1dy9gf47ydh87g48x4pv68c9dv3uwa5mhchxs6p 6250000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1jm003tnrp8u7r9x3rt627gwfcu572cfathtg22 2000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz16z7u90qu9ykxljevnkuylt234h2d3l2dnfwq75 1500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1zydukstl6ajeheqh4u6r4cvqfe0d6xdw4wf9fv 6250000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1zydukstl6ajeheqh4u6r4cvqfe0d6xdw4wf9fv 3000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1al24aqgce2dfmcv8x6p2wlx96kfx7z770hwd9g 3250000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1zrzc3eul55c6fsncmj5qlqu46dphzuwajrpxu5 750000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1ecf5ecdwsfp5fhrv2lwrk6nefnfgzlga223sum 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1krpqf9qhr3mvdf6z7r7gdpe6k3nml5vsd7d28l 7500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1hgdkr8exqj2jx2sd4v76wn2l0lyqahr7m7mzj4 7500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1w8wtw5ye3h5kmgyphusffg0vqylut7calt8t48 20000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1h90wjy9mpk54876u0cxz7nyaaugv6xu4gqnky7 3750000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz10du7vq07pupcg96v0wzheg9h0sqsq7ce0ek7ju 5000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1h90wjy9mpk54876u0cxz7nyaaugv6xu4gqnky7 3000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz10du7vq07pupcg96v0wzheg9h0sqsq7ce0ek7ju 3000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1qmynymh6p6hkddnvldl44grmg7ws4l35ltfxl5 2750000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1h9uulfhep8kqzpc2umeqjx07sugc8u29223jna 6250000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1v0xes3ryh788mcczxmd0995wpnex0durshda36 1500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1q6hh64jdq3vxyer854ghjnk4mr3ghvzgjzvl06 1500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+
+ $BINARY add-genesis-account bmz1pp6g58esx7a44lp9r9zxycax7xyuga237v8qv8 1900000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 
 # Validator Addresses (Vendor & Contributor Performance Pool)
 # Each holds 500,000 to bond + ~2 BMZ for gas. THESE are the addresses your
@@ -187,14 +191,14 @@ $BINARY init "$MONIKER" -o --chain-id "$CHAINID" --home "$HOMEDIR"
 
 # ---------------------------------------------------------------------------
 # Genesis parameter patches  (NOTE: these MUST run before the gentxs are made,
-# because bond_denom=rho18 is what makes a `...rho18` gentx valid at InitChain)
+# because bond_denom=Rho18 is what makes a `...Rho18` gentx valid at InitChain)
 # ---------------------------------------------------------------------------
-jq '.app_state["staking"]["params"]["bond_denom"]="rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["crisis"]["constant_fee"]["denom"]="rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["gov"]["params"]["min_deposit"][0]["denom"]="rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["gov"]["params"]["min_deposit"][0]["amount"]="50000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["mint"]["params"]["mint_denom"]="rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["staking"]["params"]["bond_denom"]="Rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["crisis"]["constant_fee"]["denom"]="Rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="Rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["params"]["min_deposit"][0]["denom"]="Rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["params"]["min_deposit"][0]["amount"]="50000000000000000000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["mint"]["params"]["mint_denom"]="Rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
 jq '.consensus["params"]["block"]["max_bytes"]="8388608"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.consensus["params"]["block"]["max_gas"]="100000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
@@ -240,7 +244,7 @@ sed -i 's/prometheus = false/prometheus = true/' "$CONFIG"
 sed -i 's/experimental_websocket_write_buffer_size = 200/experimental_websocket_write_buffer_size = 600/' "$CONFIG"
 sed -i 's/prometheus-retention-time  = "0"/prometheus-retention-time  = "1000000000000"/g' "$APP_TOML"
 sed -i 's/enabled = false/enabled = true/g' "$APP_TOML"
-sed -i 's/minimum-gas-prices = "0rho18"/minimum-gas-prices = "0.0000015rho18"/g' "$APP_TOML"
+sed -i 's/minimum-gas-prices = "0Rho18"/minimum-gas-prices = "0.0000015Rho18"/g' "$APP_TOML"
 sed -i 's/enable = false/enable = true/g' "$APP_TOML"
 sed -i 's/swagger = false/swagger = true/g' "$APP_TOML"
 sed -i 's/enabled-unsafe-cors = false/enabled-unsafe-cors = true/g' "$APP_TOML"

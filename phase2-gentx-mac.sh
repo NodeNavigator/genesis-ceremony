@@ -31,9 +31,9 @@ KEYRING="${KEYRING:-os}"                  # os = macOS Keychain. file | test als
 LEDGER_ACCOUNT="${LEDGER_ACCOUNT:-0}"     # HD account index; 0 = MetaMask "Account 1"
 LEDGER_INDEX="${LEDGER_INDEX:-0}"
 
-STAKE_AMOUNT="500000000000000000000000rho18"        # 500,000 BMZ — must be >= genesisvalidator min_self_delegation
+STAKE_AMOUNT="500000000000000000000000Rho18"        # 500,000 BMZ — must be >= genesisvalidator min_self_delegation
 MIN_SELF_DELEGATION="500000000000000000000000"
-FEES="30000000000000000rho18"
+FEES="30000000000000000Rho18"
 
 COMMISSION_RATE="0.05"
 COMMISSION_MAX_RATE="0.20"
@@ -113,7 +113,7 @@ echo ">>> Ledger derived operator address: $VALADDR"
 #    will be rejected at InitChain.
 # ---------------------------------------------------------------------------
 BAL=$(jq -r --arg a "$VALADDR" \
-  '.app_state.bank.balances[] | select(.address==$a) | .coins[] | select(.denom=="rho18") | .amount' \
+  '.app_state.bank.balances[] | select(.address==$a) | .coins[] | select(.denom=="Rho18") | .amount' \
   "$SKELETON")
 
 if [ -z "$BAL" ]; then
@@ -124,7 +124,7 @@ if [ -z "$BAL" ]; then
   exit 1
 fi
 
-echo ">>> Genesis balance for this address: $BAL rho18"
+echo ">>> Genesis balance for this address: $BAL Rho18"
 if [ "$(echo "$BAL >= $MIN_SELF_DELEGATION" | bc)" -ne 1 ]; then
   echo "!!! Balance is below the required self-delegation of $MIN_SELF_DELEGATION"
   exit 1
