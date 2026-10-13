@@ -33,7 +33,7 @@ LEDGER_INDEX="${LEDGER_INDEX:-0}"
 
 STAKE_AMOUNT="500000000000000000000000rho18"        # 500,000 BMZ — must be >= genesisvalidator min_self_delegation
 MIN_SELF_DELEGATION="500000000000000000000000"
-GAS_PRICES="150000000000rho18"
+FEES="30000000000000000rho18"
 
 COMMISSION_RATE="0.10"
 COMMISSION_MAX_RATE="0.20"
@@ -148,7 +148,7 @@ echo ""
   --commission-max-rate "$COMMISSION_MAX_RATE" \
   --commission-max-change-rate "$COMMISSION_MAX_CHANGE_RATE" \
   --min-self-delegation "$MIN_SELF_DELEGATION" \
-  --gas-prices "$GAS_PRICES" \
+  --fees "$FEES" \
   --sign-mode amino-json \
   --ledger \
   --keyring-backend "$KEYRING" \
