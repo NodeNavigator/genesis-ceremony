@@ -144,7 +144,7 @@ $BINARY init "$MONIKER" -o --chain-id "$CHAINID" --home "$HOMEDIR"
 # Validator Addresses (Vendor & Contributor Performance Pool)
 # Each holds 500,000 to bond + ~2 BMZ for gas. THESE are the addresses your
 # Ledger (and each other validator's key) must derive to.
- $BINARY add-genesis-account bmz1tw5tpafapktpqdlvjllsculh4ptc0fjlkkynhn 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1tw5tpafapktpqdlvjllsculh4ptc0fjlkkynhn 500100000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1cqt0d88re2jh5rce3a8srppkwc0xrxk98ez7tc 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1fgsj0lw4au08030danzjf050vf67xarr7nvhg6 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1y0q2ux95qqfuj2c4pcpxzsdzllhzefdl4x0h2p 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
@@ -156,7 +156,7 @@ $BINARY init "$MONIKER" -o --chain-id "$CHAINID" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz1smp6cw0tmzrf68sa090jzhqjgclgzg2pkfkem5 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz17ulxgqlmxhvepx5hfv485lfletq3nngeljxhw3 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
  $BINARY add-genesis-account bmz17lvaq6rp8rwhwj397trsdzgxyw0ery3qztnunt 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
- $BINARY add-genesis-account bmz1jrvtd5s39gwz8qd62nvjm0mpkpejvvghw54vw4 500000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
+ $BINARY add-genesis-account bmz1jrvtd5s39gwz8qd62nvjm0mpkpejvvghw54vw4 499900000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
 
 # Genesis Validator Compensation Pool
  $BINARY add-genesis-account bmz1hneqzs7hc5gwqvy8parnwuy5uurrfwv9xuyg0q 100000000000000000000000000$BASE_DENOM --keyring-backend "$KEYRING" --home "$HOMEDIR"
@@ -193,6 +193,7 @@ jq '.app_state["staking"]["params"]["bond_denom"]="rho18"' "$GENESIS" >"$TMP_GEN
 jq '.app_state["crisis"]["constant_fee"]["denom"]="rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.app_state["gov"]["params"]["min_deposit"][0]["denom"]="rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["params"]["min_deposit"][0]["amount"]="50000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.app_state["mint"]["params"]["mint_denom"]="rho18"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
 jq '.consensus["params"]["block"]["max_bytes"]="8388608"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
@@ -208,12 +209,12 @@ jq '.app_state["distribution"]["params"]["community_tax"]="0.000000000000000000"
 # which fails to unmarshal as a uint at InitGenesis.
 jq '.app_state["mint"]["params"]["blocks_per_year"]="5256000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
-jq '.app_state["gov"]["deposit_params"]["max_deposit_period"]="1800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["gov"]["params"]["max_deposit_period"]="1800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["gov"]["voting_params"]["voting_period"]="1800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["gov"]["params"]["voting_period"]="1800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["staking"]["params"]["unbonding_time"]="1800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["staking"]["params"]["max_validators"]="200"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["deposit_params"]["max_deposit_period"]="604800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["params"]["max_deposit_period"]="604800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["voting_params"]["voting_period"]="604800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["params"]["voting_period"]="604800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["staking"]["params"]["unbonding_time"]="604800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["staking"]["params"]["max_validators"]="250"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.app_state["slashing"]["params"]["downtime_jail_duration"]="600s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.app_state["slashing"]["params"]["signed_blocks_window"]="100000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
