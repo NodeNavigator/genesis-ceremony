@@ -63,7 +63,7 @@ KEYALGO="eth_secp256k1"
 FEE=150000000000
 BASE_DENOM="Rho18"
 
-DEPLOYER_ACCESS_ADDRESSES='["0x2279c60f81C49d71CC55bB7aB526C84550A26f04"]'
+DEPLOYER_ACCESS_ADDRESSES='["0x2279c60f81C49d71CC55bB7aB526C84550A26f04","0xF6Ae00069aa61CDC13d38F5FE64e25D647bEbB6D"]'
 FOUNDATION_ADDRESS="bmz14phuj3s3275sgqa4hrxx0xfqvhyfk32xy59e6q"
 GENESIS_VALIDATOR_MIN_STAKE="500000000000000000000000"
 
@@ -215,10 +215,10 @@ jq '.app_state["distribution"]["params"]["community_tax"]="0.000000000000000000"
 # which fails to unmarshal as a uint at InitGenesis.
 jq '.app_state["mint"]["params"]["blocks_per_year"]="5256000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
-jq '.app_state["gov"]["deposit_params"]["max_deposit_period"]="604800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["gov"]["params"]["max_deposit_period"]="604800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["gov"]["voting_params"]["voting_period"]="604800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-jq '.app_state["gov"]["params"]["voting_period"]="604800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["deposit_params"]["max_deposit_period"]="86400s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["params"]["max_deposit_period"]="86400s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["voting_params"]["voting_period"]="86400s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["gov"]["params"]["voting_period"]="86400s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.app_state["staking"]["params"]["unbonding_time"]="604800s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.app_state["staking"]["params"]["max_validators"]="250"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 jq '.app_state["slashing"]["params"]["downtime_jail_duration"]="600s"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
